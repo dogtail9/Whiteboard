@@ -1,0 +1,2 @@
+# Whiteboard
+A whiteboard application
