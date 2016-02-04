@@ -1,0 +1,20 @@
+﻿@bgColor : red;
+@footerHeight: 60px;
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: @footerHeight;
+    padding-top: 70px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: @footerHeight;
+    background-color: @bgColor;
+}

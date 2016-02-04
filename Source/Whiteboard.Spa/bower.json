@@ -1,0 +1,13 @@
+{
+	"name": "ASP.NET",
+	"private": true,
+  "dependencies": {
+    "jquery": "2.2.0",
+    "bootstrap": "3.3.6",
+    "fontawesome": "4.5.0",
+    "angular": "1.4.9",
+    "angular-sanitize": "1.4.9",
+    "angular-animate": "1.4.9",
+    "angular-route": "1.4.9"
+  }
+}
