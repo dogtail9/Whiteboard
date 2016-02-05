@@ -1,18 +1,16 @@
-﻿<div ng-app="dtWhiteboard" class="navbar navbar-default navbar-fixed-top">
+﻿<div data-ng-controller="TopNavBar as vm" class="navbar navbar-default navbar-fixed-top">
     <div id="menu">
         <div class="navbar-header">
-            <div class="navbar-brand logo hidden-xs"><span class="brand-title">Dogtail Whiteboard</span></div>
-            <div class="navbar-brand logo visible-xs"><span class="brand-title">Dogtail Whiteboard</span></div>
+            <div class="navbar-brand logo hidden-xs"><span class="brand-title">Dogtail Whiteboard TypeScript</span></div>
+            <div class="navbar-brand logo visible-xs"><span class="brand-title">Dogtail Whiteboard TypeScript</span></div>
             <button class="btn btn-xs navbar-toggle" data-toggle="collapse" data-target=".topnavbar">
                 <span class="glyphicon glyphicon-chevron-down"></span>
             </button>
         </div>
         <div class="navbar-collapse collapse topnavbar" style="padding-right:20px">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="onConnectOnline()" href="">{{connectToOnlineWhiteboardText}}</a></li>
-                <!--<li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="onShowLogIn()" href="">{{loginText}}</a></li>-->
-                <!--<li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="onShowRegister()" href="">{{registerText}}</a></li>-->
-                <li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="onContact()" href="">{{contactText}}</a></li>
+                <li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="vm.onConnectOnline()" href="">{{vm.connectToOnlineWhiteboardText}}</a></li>
+                <li class="nav" data-toggle="collapse" data-target=".topnavbar"><a ng-click="vm.onContact()" href="">{{vm.contactText}}</a></li>
             </ul>
         </div>
     </div>

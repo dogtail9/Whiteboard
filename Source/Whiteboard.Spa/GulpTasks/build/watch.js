@@ -1,5 +1,5 @@
 ﻿var gulp = require("gulp"),
-    config = require('./config')();
+    config = require('./../config')();
 
 module.exports = function (cb) {
     gulp.watch([config.paths.less, "!" + config.paths.minCss, "!" + config.paths.concatCssDest], ['css:min']);

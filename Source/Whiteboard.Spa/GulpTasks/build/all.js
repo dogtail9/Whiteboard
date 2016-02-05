@@ -1,4 +1,4 @@
 ﻿module.exports = function () {
 };
 
-module.exports.dependencies = ['css:min', 'javascript:min', 'utillity:useMinHtml'];
+module.exports.dependencies = ['css:min', 'code:jshint', 'utillity:useMinHtml'];

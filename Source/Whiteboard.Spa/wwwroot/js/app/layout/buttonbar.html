@@ -1,0 +1,45 @@
+﻿<div data-ng-controller="ButtonBar as vm" id="footer" class="container">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="pull-right hidden-xs">
+            <!--<a href="http://info.flagcounter.com/dkcx"><img src="http://s03.flagcounter.com/countxl/dkcx/bg_FFFFFF/txt_000000/border_FFFFFF/columns_5/maxflags_10/viewers_3/labels_0/pageviews_0/flags_0/" alt="Flag Counter" border="0"></a>-->
+            <p class="text-muted" style="padding-right:10px;padding-top:14px">Copyright &copy; 2016 by Dogtail AB</p>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-left navbar-collapse collapse colors" id="colors" style="padding-top:5px;padding-left:5px">
+                <li id="redBtn" class="btn btn-red visible-xs" ng-class="{ 'disabled': vm.penColorEnum=='red', '': vm.penColor!='red' }" ng-click="vm.onPenColorChanged('red')" data-toggle="collapse" data-target="#colors"><div><i class="fa fa-pencil"></i>&nbsp;Red</div></li>
+                <li id="greenBtn" class="btn btn-green visible-xs" ng-class="{ 'disabled': vm.penColor=='green', '': vm.penColor!='green' }" ng-click="vm.onPenColorChanged('green')" data-toggle="collapse" data-target="#colors"><div><i class="fa fa-pencil"></i>&nbsp;Green</div></li>
+                <li id="blueBtn" class="btn btn-blue visible-xs" ng-class="{ 'disabled': vm.penColor=='blue', '': vm.penColor!='blue' }" ng-click="vm.onPenColorChanged('blue')" data-toggle="collapse" data-target="#colors"><div><i class="fa fa-pencil"></i>&nbsp;Blue</div></li>
+                <li id="blackBtn" class="btn btn-black visible-xs" ng-class="{ 'disabled': vm.penColor=='black', '': vm.penColor!='black' }" ng-click="vm.onPenColorChanged('black')" data-toggle="collapse" data-target="#colors"><div><i class="fa fa-pencil"></i>&nbsp;Black</div></li>
+                <li id="redBtn" class="btn btn-red hidden-xs" ng-class="{ 'disabled': vm.penColor=='red', '': vm.penColor!='red' }" ng-click="vm.onPenColorChanged('red')"><div><i class="fa fa-pencil"></i>&nbsp;Red</div></li>
+                <li id="greenBtn" class="btn btn-green hidden-xs" ng-class="{ 'disabled': vm.penColor=='green', '': vm.penColor!='green' }" ng-click="vm.onPenColorChanged('green')"><div><i class="fa fa-pencil"></i>&nbsp;Green</div></li>
+                <li id="blueBtn" class="btn btn-blue hidden-xs" ng-class="{ 'disabled': vm.penColor=='blue', '': vm.penColor!='blue' }" ng-click="vm.onPenColorChanged('blue')"><div><i class="fa fa-pencil"></i>&nbsp;Blue</div></li>
+                <li id="blackBtn" class="btn btn-black hidden-xs" ng-class="{ 'disabled': vm.penColor=='black', '': vm.penColor!='black' }" ng-click="vm.onPenColorChanged('black')"><div><i class="fa fa-pencil"></i>&nbsp;Black</div></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left navbar-collapse collapse commands" id="commands" style="padding-top:5px;padding-left:5px;padding-bottom:4px">
+                <li class="btn btn-primary" style="margin-right: 5px;" ng-class="state.commandButtonState.undo" ng-click="vm.onUndoClick()"><div><i class="fa fa-undo"></i>&nbsp;Undo</div></li>
+                <li class="btn btn-primary" style="margin-right: 5px;" ng-class="state.commandButtonState.redo" ng-click="vm.onRedoClick()"><div><i class="fa fa-repeat"></i>&nbsp;Redo</div></li>
+                <li class="btn btn-primary visible-xs" style="margin-right: 5px;" ng-class="state.commandButtonState.clear" data-toggle="collapse" data-target="#commands" ng-click="vm.onEraseAllClick()"><div><i class="fa fa-times"></i>&nbsp;Clear</div></li>
+                <li class="btn btn-primary hidden-xs" style="margin-right: 5px;" ng-class="state.commandButtonState.clear" ng-click="vm.onEraseAllClick()"><div><i class="fa fa-times"></i>&nbsp;Clear</div></li>
+                <li class="btn btn-primary" style="margin-right: 5px;" ng-click="vm.onSaveClick()"><div><i class="fa fa-floppy-o"></i>&nbsp;Save</div></li>
+                <li class="btn btn-primary" style="margin-right: 5px;" ng-click="vm.onLoadClick()"><div><i class="fa fa-folder-open-o"></i>&nbsp;Load</div></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left navbar-collapse collapse mousebehavior" id="mousebehavior" style="padding-top:5px;padding-left:5px;padding-bottom:4px">
+                <li class="btn btn-primary" style="margin-right: 5px;" ng-click="vm.onTogglePanClick()"><div><i class="fa" ng-class="{ 'fa-arrows': vm.panEnabled, 'fa-pencil-square-o': ! vm.panEnabled }"></i>&nbsp;{{vm.toggleButtonText}}</div></li>
+            </ul>
+        </div>
+        <div class="navbar-header">
+            <button class="btn btn-xs navbar-toggle" data-toggle="collapse" data-target="#colors">
+                <span class="fa fa-pencil"></span>
+            </button>
+            <button class="btn btn-xs navbar-toggle" data-toggle="collapse" data-target="#commands">
+                <span class="fa fa-cog"></span>
+            </button>
+            <button class="btn btn-xs navbar-toggle" ng-click="vm.onTogglePanClick()">
+                <span class="fa" ng-class="{ 'fa-arrows': vm.panEnabled, 'fa-pencil-square-o': ! vm.panEnabled }"></span>
+            </button>
+            <div class="pull-left visible-xs">
+                <p class="text-muted" style="padding-left:10px;padding-top:17px">Copyright &copy; 2014 by Dogtail AB</p>
+            </div>
+        </div>
+    </nav>
+</div>
